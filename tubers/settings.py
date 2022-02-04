@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'webpages.apps.WebpagesConfig',
+    'webpages',
     'djangocms_admin_style',
     'django.contrib.admin',
     'django.contrib.auth',
