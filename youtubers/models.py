@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Youtuber(models.Model):
@@ -33,7 +34,7 @@ class Youtuber(models.Model):
     price = models.IntegerField()
     photo = models.ImageField(upload_to = 'media/ytubers/%Y/%m/')
     video_url = models.CharField(max_length=255)
-    description = models.TextField()
+    description = RichTextField()
     city = models.CharField(max_length=255)
     age = models.IntegerField()
     height = models.IntegerField()
