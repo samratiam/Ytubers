@@ -5,6 +5,21 @@ from django.contrib import messages, auth
 
 # Create your views here.
 def login(request):
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password = password)
+
+        if user is not None:
+            auth.login(request, user)
+            messages.error(request, 'You are logged in')
+            return redirect('dashboard')
+
+        else:
+            messages.error(request, 'Invalid credentials')
+            return redirect('login')
+
     return render(request,'accounts/login.html')
 
 def register(request):
