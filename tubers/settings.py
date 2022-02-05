@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'webpages',
     'youtubers',
+    'accounts',
     'ckeditor',
     'djangocms_admin_style',
     'django.contrib.admin',
