@@ -91,24 +91,24 @@
       <div class="tubers grid">
 
         <!-- person 1 -->
-        {% for fy in featured_youtubers %}
+        {% for at in all_tubers %}
         <div class="card border-0 text-center">
           <div>
-            <img src="{{ fy.photo.url }}" class="card-img-top" alt="team-member">
+            <img src="{{ at.photo.url }}" class="card-img-top" alt="team-member">
 
           </div>
           <div class="card-body">
-            <h5 class="card-title">{{fy.name}}</h5>
-            <p class="card-text">Gaming</p>
+            <h5 class="card-title">{{at.name}}</h5>
+            <p class="card-text">{{at.category}}</p>
             <div class="person-description mt-2">
-              <button class="btn btn-accent"> City </button>
-              <button class="btn btn-accent"> Age </button>
-              <button class="btn btn-accent"> Height </button>
+              <button class="btn btn-accent"> City : {{at.city}} </button>
+              <button class="btn btn-accent"> Age : {{at.age}} </button>
+              <button class="btn btn-accent"> Height : {{at.height}} </button>
             </div>
             <div class="person-description mt-2">
-              <button class="btn btn-accent"> Solo </button>
-              <button class="btn btn-accent"> Canon </button>
-              <button class="btn btn-accent"> Subs </button>
+              <button class="btn btn-accent"> Crew : {{at.crew}} </button>
+              <button class="btn btn-accent"> Camera type : {{at.camera_type}} </button>
+              <button class="btn btn-accent"> Subs : {{at.subs_count}} </button>
             </div>
           </div>
         </div>
