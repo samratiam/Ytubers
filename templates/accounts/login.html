@@ -7,6 +7,14 @@
     <h1 class="text-center mt-5 mb-5 animate__animated animate__slideInDown">
       Login
     </h1>
+
+    <!-- Include message.html to display error message  -->
+    <div class="row">
+      <div class="col-md-6 offset-md-4">
+        {% include 'messages.html' %}
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-md-6 ">
         <img src="{% static './assets/images/login-image.png' %}" class="img-fluid" alt="img">
