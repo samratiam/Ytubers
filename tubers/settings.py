@@ -35,6 +35,7 @@ LOGIN_REDIRECT_URL = 'dashboard'
 INSTALLED_APPS = [
     'webpages',
     'youtubers',
+    'hiretubers',
     'accounts',
     'ckeditor',
     'djangocms_admin_style',
